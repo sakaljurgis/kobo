@@ -1,0 +1,12 @@
+services:
+  server:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/srv/app/
+      - ./data:/data
+    env_file:
+      - .env
+    ports:
+      - $PORT:$PORT

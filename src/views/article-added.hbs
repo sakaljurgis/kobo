@@ -1,0 +1,14 @@
+<div>
+  <a href="/"><div class="item">Back to main</div></a>
+</div>
+<div>
+  <a href="/add-article"><div class="item">Add another</div></a>
+</div>
+<div>
+  <a href="/articles"><div class="item">Articles</div></a>
+</div>
+{{#if id}}
+  <div>
+    <a href="/articles/{{id}}"><div class="item">Download</div></a>
+  </div>
+{{/if}}

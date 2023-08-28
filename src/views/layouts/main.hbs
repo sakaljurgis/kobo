@@ -1,0 +1,32 @@
+<html lang="lt">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kobo</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+<h1>
+  {{title}}
+</h1>
+
+<div>
+  {{{body}}}
+</div>
+
+<div>
+  {{#if pagesList}}
+    {{> pagination }}
+  {{/if}}
+</div>
+
+<div>
+  {{#if debug}}
+    <pre>{{toJSON debug}}
+    </pre>
+  {{/if}}
+</div>
+
+</body>
+</html>
+

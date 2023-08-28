@@ -1,0 +1,12 @@
+<a href="/">
+  <div class="item">Back to main</div>
+</a>
+<div>
+  {{#each searchResults}}
+    <a href="/articles/{{this.id}}">
+      <div class="item">
+        {{this.title}}
+      </div>
+    </a>
+  {{/each}}
+</div>

@@ -1,0 +1,39 @@
+.col-7 {
+  width: 70%;
+}
+
+.kobo-input {
+  font-size: xx-large;
+  border: 4px black solid;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination span {
+  color: black;
+  float: left;
+  padding: 10px 20px;
+  margin: 4px;
+  text-decoration: none;
+  border: 1px black solid;
+  font-size: x-large;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a div {
+  background-color: buttonface;
+  font-size: x-large;
+}
+
+div .item {
+  font-size: x-large;
+  border: black 2px solid;
+  margin-bottom: 20px;
+  padding: 10px;
+}

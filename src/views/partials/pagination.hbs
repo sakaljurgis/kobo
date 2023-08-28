@@ -1,0 +1,25 @@
+<div class="pagination">
+  {{#each pagesList}}
+    {{#if @first}}
+      {{#if this}}
+        <a href="{{this}}"><span>&laquo;</span></a>
+      {{else}}
+        <span style="color: grey">&laquo;</span>
+      {{/if}}
+    {{else}}
+      {{#if @last}}
+        {{#if this}}
+          <a href="{{this}}"><span>&raquo;</span></a>
+        {{else}}
+          <span>&raquo;</span>
+        {{/if}}
+      {{else}}
+        {{#if this}}
+          <a href="{{this}}"><span>{{@index}}</span></a>
+        {{else}}
+          <span style="background-color: black; color: white">{{@index}}</span>
+        {{/if}}
+      {{/if}}
+    {{/if}}
+  {{/each}}
+</div>
