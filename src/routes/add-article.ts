@@ -32,6 +32,7 @@ addArticleRouter.get('/', (req, res) => {
         uid: hash,
         title: article.title ?? 'no title',
         dateAdded: new Date().toISOString().split('T')[0],
+        url,
       });
 
       mkdir(dir, {recursive: true}, (err) => {

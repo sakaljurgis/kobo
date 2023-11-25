@@ -6,6 +6,7 @@ interface Article {
   title: string;
   dateAdded: string;
   uid: string;
+  url: string;
 }
 
 class ArticlesRepository {
