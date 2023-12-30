@@ -6,7 +6,24 @@ services:
     volumes:
       - .:/srv/app/
       - ./data:/data
+      - $BOOKS_FOLDER_1:$BOOKS_FOLDER_1
+      - $BOOKS_FOLDER_2:$BOOKS_FOLDER_2
     env_file:
       - .env
     ports:
       - $PORT:$PORT
+
+  search:
+    image: elasticsearch:8.11.3
+    environment:
+      - "discovery.type=single-node"
+      - "xpack.security.enabled=false"
+#      - "ES_JAVA_OPTS=-Xms256m -Xmx256m"
+    deploy:
+      resources:
+        limits:
+#          cpus: '0.001'
+          memory: 512M
+    ports:
+      - 9200:9200
+#      - 9300:9300

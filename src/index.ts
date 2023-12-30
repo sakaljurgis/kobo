@@ -5,6 +5,8 @@ import {searchRouter} from "./routes/search";
 import {join} from "path";
 import {addArticleRouter} from "./routes/add-article";
 import {articlesRouter} from "./routes/articles";
+import { booksRouter } from "./routes/books";
+import { scanRouter } from "./routes/scan";
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -31,6 +33,8 @@ app.use("/", indexRouter);
 app.use("/search", searchRouter);
 app.use("/add-article", addArticleRouter);
 app.use("/articles", articlesRouter);
+app.use("/books", booksRouter);
+app.use("/scan", scanRouter);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
