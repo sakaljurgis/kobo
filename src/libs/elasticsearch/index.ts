@@ -4,9 +4,9 @@ interface DataType {
   path: string;
   title: string;
   creator: string;
-  fileId: string;
+  fileId: number;
 
-  [key: string]: string;
+  [key: string]: string | number;
 }
 
 export class ElasticSearch {
