@@ -1,6 +1,7 @@
 import { Client, errors } from '@elastic/elasticsearch';
+import { meiliSearch } from '../meili';
 
-interface DataType {
+export interface DataType {
   path: string;
   title: string;
   creator: string;
@@ -65,6 +66,7 @@ export class ElasticSearch {
   };
 
   async addDocument(payload: DataType) {
+    meiliSearch.addDocument(payload).then();
     return this.client.index({
       index: this.indexName,
       id: payload.path,

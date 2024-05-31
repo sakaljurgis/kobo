@@ -27,3 +27,9 @@ services:
     ports:
       - 9200:9200
 #      - 9300:9300
+  meilisearch:
+    image: getmeili/meilisearch:latest
+    environment:
+      - MEILI_NO_ANALYTICS=true
+    ports:
+      - 7700:7700
